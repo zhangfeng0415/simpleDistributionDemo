@@ -3,7 +3,8 @@
 ### 基本介绍
 
 本项目是一个集成了spring MVC + mybatis 。
-
+#3.8start
+-分布式系统开发
 - 开发环境：
 	- `JDK`: `1.8.0_11`
 	- `Maven`: `Apache Maven 3.3.9`

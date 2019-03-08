@@ -22,7 +22,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("武侯文档管理系统接口文档")
+                .title("文档管理系统接口文档")
                 .contact(new Contact("章峰", "", "2498711309@qq.com"))
                 .build();
     }

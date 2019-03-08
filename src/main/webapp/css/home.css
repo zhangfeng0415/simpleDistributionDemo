@@ -1,0 +1,47 @@
+#content{
+    border: 3px dashed gray;
+    border-radius: 10px;
+    margin: 10px 20px;
+    height:400px;
+    overflow: auto;
+    padding:2px 8px;
+}
+#table1{
+    width:100%;
+    border-collapse: collapse;
+}
+#content tr:first-child td{
+    border-top-width: 0px;
+}
+#content tr td:last-child{
+    cursor: pointer;
+    color: red;
+}
+#content tr td{
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    border-top:1px solid #9A9A9A;
+}
+#content tr:hover{
+    background-color: #d5d5d5;
+}
+#content tr:active{
+    background-color: #9A9A9A;
+}
+#loading {
+    width:170px;
+    height:25px;
+    border:3px solid #C3DAF9;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin: -12.5px 0 0 -85px;
+    z-index:10000;
+    background-color:#F7F9FC;
+    line-height:25px;
+    vertical-align:middle;
+    font-size:11pt;
+    display:none;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工程管理</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-table.min.css">
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+</head>
+<body>
+<nav  class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="../image/logo1.png" alt="" height="50px">
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li ><a href="officialBox.html">文书档案</a></li>
+                <li class="active"><a href="#">工程档案</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="account.html">账号管理</a></li>
+                <li><a id="exit" href="javascript:void(0)">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="width: 1200px;margin:50px auto 20px;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">添加工程档案盒</button>
+    <!--    <button style="float: right" type="button" class="btn btn-primary" onclick="location.href='../user/officialDocument/export'">导出为Excel</button>-->
+    <div style="width:305px;float:right">
+        <select   id="query" class="selectpicker show-tick" data-width="100px"  style="display: inline-block" >
+            <option value="1">项目名称</option>
+            <option value="2">档号</option>
+        </select>
+        <input id="con" type="text" class="form-control" style="width: 140px;display: inline-block"/>
+        <button id="search" class="btn btn-default" type="button" style="display: inline-block">查找</button>
+    </div>
+</div>
+
+
+<div style="width: 1200px;margin:0 auto">
+    <table id="table"></table>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">添加工程档案盒</h4>
+            </div>
+            <div align="center" class="modal-body">
+                <table style="border-collapse:separate; border-spacing:0 10px;">
+                    <tr>
+                        <td style="text-align:right">项目名称：</td>
+                        <td><input type="text" id="projectName" /></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">档号：</td>
+                        <td><input type="text" id="boxNum"/></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">文件总数：</td>
+                        <td><input type="text" id="totalFileNum" onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+                                   onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"/></td>
+                    </tr>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="addBox" type="button" class="btn btn-primary">添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" >工程档案盒修改</h4>
+            </div>
+            <div align="center" class="modal-body">
+                <table style="border-collapse:separate; border-spacing:0 10px;">
+                    <tr>
+                        <td style="text-align:right">项目名称：</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">档号：</td>
+                        <td><input type="text" id="boxNum-change"/>
+                            <input id="boxId" type="hidden">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right">文件总数：</td>
+                        <td><input type="text" id="totalFileNum-change" onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+                                   onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"/></td>
+                    </tr>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="modify" type="button" class="btn btn-primary">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/user/projectBox.js"></script>
+</body>
+</html>

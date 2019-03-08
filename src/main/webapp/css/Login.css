@@ -1,0 +1,38 @@
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+    text-align: center
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white;
+    text-align: center
+}
+
+input:-ms-input-placeholder{
+    color: white;
+    text-align: center
+}
+
+input::-webkit-input-placeholder{
+    color: white;
+    text-align: center
+}
+.inputbox{
+    display: inline-block;
+    margin:10px 0 10px 8px;
+    width: 250px;
+    height: 40px;
+    background-color:rgba(0,0,0,0.2);
+    border: none;color: white;
+    border-radius: 5px;
+    outline:none;
+}
+
+#login{
+    margin:10px 0;
+    width: 320px;
+    height: 40px;
+    border: none;color: white;
+    border-radius: 5px;
+    outline:none;
+}

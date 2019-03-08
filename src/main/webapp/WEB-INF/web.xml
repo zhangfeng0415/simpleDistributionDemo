@@ -1,0 +1,84 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>wuhou</display-name>
+
+  <!-- Spring字符集过滤器 -->
+  <filter>
+    <filter-name>encoding</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter>
+    <filter-name>adminFilter</filter-name>
+    <filter-class>edu.uestc.cilab.filter.AdminFilter</filter-class>
+    <init-param>
+      <param-name>redirectURL</param-name>
+      <param-value>index.html</param-value>
+      <description>检查失败后需要定向到的页面</description>
+    </init-param>
+    <init-param>
+      <param-name>ignoreURLs</param-name>
+      <param-value>/login</param-value>
+      <description>不用检查用户的页面列表，用","分隔</description>
+    </init-param>
+  </filter>
+
+  <!-- 配置用户登录过滤器 -->
+  <filter>
+    <filter-name>userFilter</filter-name>
+    <filter-class>edu.uestc.cilab.filter.UserFilter</filter-class>
+    <init-param>
+      <param-name>redirectURL</param-name>
+      <param-value>index.html</param-value>
+      <description>检查失败后需要定向到的页面</description>
+    </init-param>
+    <init-param>
+      <param-name>ignoreURLs</param-name>
+      <param-value>/login</param-value>
+      <description>不用检查用户的页面列表，用","分隔</description>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>adminFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>userFilter</filter-name>
+    <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>SpringServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!-- 可以通过contextConfigLocation来自定义SpringMVC配置文件的位置，如不指定，则默认在WEB-INF目录下，名称为[<servlet-name>]-servlet.xml，
+         此时文件名必须为[<servlet-name>]-servlet.xml，否则会出错-->
+    <!--以下init-param是自定义SpringMVC的配置文件的位置 -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-mvc.xml,/WEB-INF/applicationContext.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!-- 拦截设置 -->
+  <servlet-mapping>
+    <servlet-name>SpringServlet</servlet-name>
+    <!-- 拦截的请求,"/"代表拦截所有的请求 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <!-- Spring MVC 核心配置结束 -->
+
+</web-app>

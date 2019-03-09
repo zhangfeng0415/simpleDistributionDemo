@@ -5,5 +5,3 @@
 /.idea/
 sql/
 src/main/test/
-/src/main/resources/generatorConfig.xml
-/src/main/resources/jdbc.properties

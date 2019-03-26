@@ -151,6 +151,6 @@
         <!--<table tableName="official_document" schema="wuhou"></table>-->
         <!--<table tableName="official_box" schema="wuhou"></table>-->
         <!--<table tableName="project_box" schema="wuhou"></table>-->
-        <!--<table tableName="project_document" schema="wuhou"></table>-->
+        <table tableName="goods" schema="wuhou"></table>
     </context>
 </generatorConfiguration>

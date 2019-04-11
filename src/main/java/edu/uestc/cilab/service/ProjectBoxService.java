@@ -15,7 +15,7 @@ public interface ProjectBoxService {
      * 添加工程档案盒子
      *
      * @param  projectBox 文书档案盒子
-     * @author zhangfeng 作者
+     * @throws  ExistException
      */
     void add(ProjectBox projectBox) throws ExistException;
     /**
@@ -28,29 +28,36 @@ public interface ProjectBoxService {
 
     /**
      * 更新工程档案盒子
+     *
      * @param projectBox 文书档案盒子
-     * @author zhangfeng 作者
+     * @throws  ExistException
      */
     void update(ProjectBox projectBox)throws ExistException ;
 
     /**
      * 查询工程档案盒子
      *
-     * @author zhangfeng 作者
+     * @param pageNumber 页码
+     * @param pageSize 页面大小
+     * @param sortName 排序字段
+     * @param sortOrder 排序方式
+     * @param projectName 工程名称
+     * @param boxNumber 盒号
+     * @return PageUtil<ProjectBox>
      */
     PageUtil<ProjectBox> select(Integer pageNumber, Integer pageSize, String sortName, String sortOrder,String projectName, String boxNumber);
 
     /**
      * 查询所有项目名称列表
      *
-     * @author zhangfeng
+     * @return List<ProjectBox>
      */
     List<ProjectBox> selectProjectList();
 
     /**
      * 获取指定项目名称条件下的列表
-     * @param projectName
-     * @return
+     * @param projectName 工程名称
+     * @return List<ProjectBox>
      */
     List<ProjectBox> getProjectListByName ( String projectName);
 }

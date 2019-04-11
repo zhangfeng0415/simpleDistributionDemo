@@ -75,7 +75,8 @@ public class ProjectBoxServiceImpl implements ProjectBoxService{
         PageHelper.startPage(pageNumber, pageSize);
         ProjectBoxExample projectBoxExample = new ProjectBoxExample();
         ProjectBoxExample.Criteria criteria = projectBoxExample.createCriteria();
-        if (projectName != null){criteria.andProjectNameLike("%" + projectName+ "%");}
+        String  percent = "%";
+        if (projectName != null){criteria.andProjectNameLike(percent + projectName+ percent);}
         if (boxNumber != null){criteria.andBoxNumberEqualTo(boxNumber); }
         String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
         projectBoxExample.setOrderByClause(orderByClause);

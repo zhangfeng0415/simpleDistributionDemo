@@ -78,7 +78,8 @@ public class OfficialBoxServiceImpl implements OfficialBoxService {
         PageHelper.startPage(pageNumber, pageSize);
         OfficialBoxExample officialBoxExample = new OfficialBoxExample();
         OfficialBoxExample.Criteria criteria = officialBoxExample.createCriteria();
-        if (boxNumber != null){criteria.andBoxNumberLike("%" + boxNumber + "%"); }
+        String  percent = "%";
+        if (boxNumber != null){criteria.andBoxNumberLike(percent + boxNumber + percent); }
         String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
         officialBoxExample.setOrderByClause(orderByClause);
         List<OfficialBox> officialBoxes = officialBoxMapper.selectByExample(officialBoxExample);

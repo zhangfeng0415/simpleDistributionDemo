@@ -61,13 +61,14 @@ public class OfficialDocumentServiceImpl implements OfficialDocumentService{
         PageHelper.startPage(pageNumber, pageSize);
         OfficialDocumentExample officialDocumentExample = new OfficialDocumentExample();
         OfficialDocumentExample.Criteria criteria = officialDocumentExample.createCriteria();
+        String  percent = "%";
         if (officialBoxId != null){criteria.andOfficialBoxIdEqualTo(officialBoxId); }
         if (boxNumber != null){criteria.andBoxNumberEqualTo(boxNumber); }
-        if (number != null){criteria.andNumberLike("%"+ number +"%"); }
-        if (responsiblePerson != null){criteria.andResponsiblePersonLike("%"+ responsiblePerson + "%");}
-        if (title != null){criteria.andTitleLike("%"+ title + "%");}
-        if (keepTime != null){criteria.andKeepTimeLike("%"+ keepTime +"%");}
-        if (createUserName != null){criteria.andCreateUserNameLike("%"+ createUserName +"%");}
+        if (number != null){criteria.andNumberLike(percent+ number +percent); }
+        if (responsiblePerson != null){criteria.andResponsiblePersonLike(percent+ responsiblePerson + percent);}
+        if (title != null){criteria.andTitleLike(percent+ title + percent);}
+        if (keepTime != null){criteria.andKeepTimeLike(percent+ keepTime +percent);}
+        if (createUserName != null){criteria.andCreateUserNameLike(percent+ createUserName +percent);}
         String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
         officialDocumentExample.setOrderByClause(orderByClause);
         List<OfficialDocument> officialDocuments = officialDocumentMapper.selectByExample(officialDocumentExample);

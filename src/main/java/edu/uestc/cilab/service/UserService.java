@@ -17,7 +17,7 @@ public interface UserService {
      * 添加用户
      *
      * @param user 用户
-     * @author zhangfeng 作者
+     * @throws  ExistException
      */
     void add(User user) throws ExistException;
 
@@ -25,13 +25,11 @@ public interface UserService {
      * 删除用户
      *
      * @param id 用户id
-     * @author zhangfeng 作者
      */
     void delete(Integer id);
     /**
      * 更新用户
      * @param user 用户
-     * @author zhangfeng 作者
      */
     void update(User user);
 
@@ -39,7 +37,6 @@ public interface UserService {
      * 停用用户帐号
      *
      * @param id 用户ID
-     * @author zhangfeng 作者
      */
     void stop(Integer id);
 
@@ -47,7 +44,6 @@ public interface UserService {
      * 启用用户帐号
      *
      * @param id 用户ID
-     * @author zhangfeng 作者
      */
     void start(Integer id);
     /**
@@ -56,21 +52,21 @@ public interface UserService {
      * @param id          教师ID
      * @param oldPassword 旧密码
      * @param newPassword 新密码
-     * @author zhangfeng 作者
+     * @throws  ParamException
      */
     void updatePassword(Integer id, String oldPassword, String newPassword) throws ParamException;
 
     /**
      * 根据工号查询用户的信息
      * @param number  用户号码
-     * @return
+     * @return List<User>
      */
     List<User> selectUser(String number);
 
     /**
      * 获取所有角色信息
      *
-     * @author zhangfeng
+     * @return List<User>
      */
     List<User> selectAllUser();
 }

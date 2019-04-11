@@ -8,6 +8,7 @@ import edu.uestc.cilab.repository.GoodsMapper;
 import edu.uestc.cilab.service.GoodsService;
 import edu.uestc.cilab.util.DBUtil;
 import edu.uestc.cilab.util.PageUtil;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,8 +54,9 @@ public class GoodsServiceImpl implements GoodsService {
         PageHelper.startPage(pageNumber, pageSize);
         GoodsExample goodsExample = new GoodsExample();
         GoodsExample.Criteria criteria = goodsExample.createCriteria();
-        if (goodsType !=null){ criteria.andGoodsTypeLike("%" + goodsType + "%"); }
-        if (title !=null){ criteria.andTitleLike("%" + title + "%"); }
+        String  percent = "%";
+        if (goodsType !=null){ criteria.andGoodsTypeLike(percent + goodsType + percent); }
+        if (title !=null){ criteria.andTitleLike(percent + title + percent); }
         String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
         goodsExample.setOrderByClause(orderByClause);
         List<Goods> goodsList = goodsMapper.selectByExample(goodsExample);

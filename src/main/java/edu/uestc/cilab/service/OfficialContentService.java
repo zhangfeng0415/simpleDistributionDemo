@@ -14,7 +14,6 @@ public interface OfficialContentService {
      * 添加文书档案
      *
      * @param officialContent 文书档案内容
-     * @author zhangfeng 作者
      */
     void add(OfficialContent officialContent);
 
@@ -28,7 +27,7 @@ public interface OfficialContentService {
     /**
      * 获取指定文书档案id下所有图片内容地址
      * @param officialDocumentId 文书档案id
-     * @return
+     * @return List<OfficialContent>
      */
     List<OfficialContent>getAllData(Integer officialDocumentId);
 

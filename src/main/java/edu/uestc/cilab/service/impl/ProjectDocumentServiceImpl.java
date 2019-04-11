@@ -62,13 +62,14 @@ public class ProjectDocumentServiceImpl implements ProjectDocumentService{
         PageHelper.startPage(pageNumber, pageSize);
         ProjectDocumentExample projectDocumentExample = new ProjectDocumentExample();
         ProjectDocumentExample.Criteria criteria = projectDocumentExample.createCriteria();
+        String  percent = "%";
         if (projectBoxId != null) {criteria.andProjectBoxIdEqualTo(projectBoxId);}
         if (boxNumber != null){criteria.andBoxNumberEqualTo(boxNumber); }
-        if (number != null) {criteria.andNumberLike("%"+ number +"%");}
-        if (responsiblePerson != null){criteria.andResponsiblePersonLike("%"+ responsiblePerson + "%");}
-        if (title != null){criteria.andTitleLike("%"+ title + "%");}
-        if (keepTime != null){criteria.andKeepTimeLike("%"+ keepTime +"%");}
-        if (createUserName != null){criteria.andCreateUserNameLike("%"+ createUserName +"%");}
+        if (number != null) {criteria.andNumberLike(percent+ number +percent);}
+        if (responsiblePerson != null){criteria.andResponsiblePersonLike(percent+ responsiblePerson + percent);}
+        if (title != null){criteria.andTitleLike(percent+ title + percent);}
+        if (keepTime != null){criteria.andKeepTimeLike(percent+ keepTime +percent);}
+        if (createUserName != null){criteria.andCreateUserNameLike(percent+ createUserName +percent);}
         String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
         projectDocumentExample.setOrderByClause(orderByClause);
         List<ProjectDocument> projectDocuments = projectDocumentMapper.selectByExample(projectDocumentExample);
@@ -86,13 +87,14 @@ public class ProjectDocumentServiceImpl implements ProjectDocumentService{
             ProjectDocumentExample projectDocumentExample = new ProjectDocumentExample();
             ProjectDocumentExample.Criteria criteria = projectDocumentExample.createCriteria();
             Integer projectBoxId = projectBox.getId();
+            String  percent = "%";
             if (projectBoxId != null) {criteria.andProjectBoxIdEqualTo(projectBoxId);}
             if (boxNumber != null){criteria.andBoxNumberEqualTo(boxNumber); }
-            if (number != null) {criteria.andNumberLike("%"+ number +"%");}
-            if (responsiblePerson != null){criteria.andResponsiblePersonLike("%"+ responsiblePerson + "%");}
-            if (title != null){criteria.andTitleLike("%"+ title + "%");}
-            if (keepTime != null){criteria.andKeepTimeLike("%"+ keepTime +"%");}
-            if (createUserName != null){criteria.andCreateUserNameLike("%"+ createUserName +"%");}
+            if (number != null) {criteria.andNumberLike(percent+ number +percent);}
+            if (responsiblePerson != null){criteria.andResponsiblePersonLike(percent+ responsiblePerson + percent);}
+            if (title != null){criteria.andTitleLike(percent+ title + percent);}
+            if (keepTime != null){criteria.andKeepTimeLike(percent+ keepTime +percent);}
+            if (createUserName != null){criteria.andCreateUserNameLike(percent+ createUserName +percent);}
             String orderByClause = DBUtil.getColumNameByProperty(sortName) + " " + sortOrder;
             projectDocumentExample.setOrderByClause(orderByClause);
             List<ProjectDocument> projectDocument = projectDocumentMapper.selectByExample(projectDocumentExample);

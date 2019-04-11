@@ -23,10 +23,10 @@ import javax.validation.Valid;
 import java.util.stream.Collectors;
 
 /**
- * @author zhangfeng 2498711309@qq.com
- * @date 2019/3/26 16:01
- * @description：
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 商品controller
+ **/
 @Controller
 public class GoodsController {
     Logger logger = LoggerFactory.getLogger(GoodsController.class);
@@ -81,7 +81,7 @@ public class GoodsController {
 
     @RequestMapping(value = {"/admin/goods/goodsSelectByParameter", "/user/goods/goodsSelectByParameter"},method = RequestMethod.GET)
     @ResponseBody
-    @ApiOperation("商品查询")
+    @ApiOperation("根据参数查询商品")
     public  ResultUtil<PageUtil<Goods>> goodsSelectByParameter(@ApiParam("请求页码") @RequestParam(required = false, defaultValue = "1") Integer pageNumber,
                                                                 @ApiParam("页面大小") @RequestParam(required = false, defaultValue = PageConstant.DEFAULT_PAGE_SIZE) Integer pageSize,
                                                                 @ApiParam("排序的字段") @RequestParam(required = false, defaultValue = "id") String sortName,
@@ -102,10 +102,12 @@ public class GoodsController {
 
     @RequestMapping(value = {"/admin/goods/goodsSelectById", "/user/goods/goodsSelectById"},method = RequestMethod.GET)
     @ResponseBody
-    @ApiOperation("商品查询")
+    @ApiOperation("根据id查询商品")
     public  ResultUtil<Goods> goodsSelectById(@ApiParam(value = "商品id", required = true ) @PathVariable Integer id)
     {
         Goods goods = goodsService.selectById(id);
         return new ResultUtil(ResponseConstant.ResponseCode.SUCCESS, "查询成功",goods);
     }
+
+
 }

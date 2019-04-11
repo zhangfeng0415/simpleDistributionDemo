@@ -5,7 +5,7 @@ package edu.uestc.cilab.util;
  * <p/>
  * Create with education in edu.uestc.cilab.util
  * Class: DBUtil.java
- * User: joe-mac
+ * @author : joe-mac
  * Email: zhangshuzhou.hi@163.com
  * Time: 2017-06-20 14:14
  * Description:

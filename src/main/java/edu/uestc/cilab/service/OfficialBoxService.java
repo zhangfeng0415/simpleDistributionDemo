@@ -3,10 +3,11 @@ package edu.uestc.cilab.service;
 import edu.uestc.cilab.entity.OfficialBox;
 import edu.uestc.cilab.exception.ExistException;
 import edu.uestc.cilab.util.PageUtil;
-
 /**
- * Created by zhangfeng on 2018/3/6.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 文书盒子接口
+ **/
 public interface OfficialBoxService {
     /**
      * 添加文书档案盒子

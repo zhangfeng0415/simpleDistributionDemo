@@ -11,9 +11,15 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
-
 /**
- * Created by zhangfeng on 2018/1/15.
+ * Copyright ©2017 章峰(https://github.com/zhangfeng04150415)@电子科技大学计算机科学与工程学院
+ * <p/>
+ * Create with education in edu.uestc.cilab.constant
+ * Class: DateConstant.java
+ * @author : zhangfeng
+ * Email: 2498711309@qq.com
+ * Time: 2017-11-21 16:43
+ * Description:
  */
 public class ExportExcel<T> {
     public void exportExcel(String[] headers, Collection<T> dataset, String fileName, HttpServletResponse response) {

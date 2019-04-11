@@ -13,12 +13,13 @@ import edu.uestc.cilab.util.DBUtil;
 import edu.uestc.cilab.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
- * Created by zhangfeng on 2018/3/6.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 文书盒子接口实现层
+ **/
 @Service
 public class OfficialBoxServiceImpl implements OfficialBoxService {
 

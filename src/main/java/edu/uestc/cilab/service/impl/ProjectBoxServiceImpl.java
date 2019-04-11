@@ -17,8 +17,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by zhangfeng on 2018/3/6.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 工程盒子接口实现层
+ **/
 @Service
 public class ProjectBoxServiceImpl implements ProjectBoxService{
 

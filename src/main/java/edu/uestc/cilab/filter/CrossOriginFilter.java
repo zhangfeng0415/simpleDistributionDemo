@@ -7,8 +7,10 @@ import java.io.IOException;
 
 
 /**
- * Created by yzp on 17-6-2.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 跨域访问
+ **/
 public class CrossOriginFilter implements Filter {
     private boolean isCross = false;
 

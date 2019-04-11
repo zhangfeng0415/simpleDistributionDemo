@@ -7,7 +7,7 @@ import java.util.List;
  * <p>
  * Create with marxism in com.iustu.marxism.util
  * Class: PageUtil.java
- * User: joe-mac
+ * @author : joe-mac
  * Email: zhangshuzhou.hi@163.com
  * Time: 2016-08-12 20:20
  * Description:

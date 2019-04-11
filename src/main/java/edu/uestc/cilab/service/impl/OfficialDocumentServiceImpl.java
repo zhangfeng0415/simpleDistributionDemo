@@ -19,8 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by zhangfeng on 2018/1/12.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 文书文件接口实现层
+ **/
 @Service
 public class OfficialDocumentServiceImpl implements OfficialDocumentService{
 

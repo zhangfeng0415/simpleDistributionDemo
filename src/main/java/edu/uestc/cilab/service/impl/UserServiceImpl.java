@@ -18,15 +18,17 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Created by zhangfeng on 2018/1/11.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 用户接口实现层
+ **/
 @Service(value = "userService")
 public class UserServiceImpl implements UserService{
     @Autowired
     UserMapper userMapper;
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = ExistException.class)
     public void add(User user) throws ExistException {
         UserExample example =new UserExample();
         example.or().andNameEqualTo(user.getNumber());

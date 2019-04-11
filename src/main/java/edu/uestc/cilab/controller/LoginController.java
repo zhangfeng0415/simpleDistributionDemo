@@ -20,8 +20,10 @@ import java.util.List;
 import static edu.uestc.cilab.util.MD5Util.MD5Value;
 
 /**
- * Created by zhangfeng on 2018/1/11.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 登录
+ **/
 @Controller
 public class LoginController {
     @Autowired

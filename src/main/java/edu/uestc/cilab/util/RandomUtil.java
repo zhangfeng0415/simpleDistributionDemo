@@ -7,7 +7,7 @@ import java.util.Random;
  * <p>
  * Create with marxism in com.iustu.marxism.util
  * Class: RandomUtil.java
- * User: joe-mac
+ * @author : joe-mac
  * Email: zhangshuzhou.hi@163.com
  * Time: 2016-09-18 14:14
  * Description:

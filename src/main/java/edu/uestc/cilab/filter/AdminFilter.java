@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * create by zhangfeng
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description:  管理员权限过滤器
+ **/
 public class AdminFilter implements Filter {
 
     Logger logger = LoggerFactory.getLogger(AdminFilter.class);

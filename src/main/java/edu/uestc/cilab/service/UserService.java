@@ -6,10 +6,11 @@ import edu.uestc.cilab.exception.ParamException;
 import edu.uestc.cilab.util.PageUtil;
 
 import java.util.List;
-
 /**
- * Created by zhangfeng on 2018/1/11.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 用户接口
+ **/
 public interface UserService {
 
     /**

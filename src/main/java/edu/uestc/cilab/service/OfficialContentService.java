@@ -4,10 +4,11 @@ import edu.uestc.cilab.entity.OfficialContent;
 import io.swagger.models.auth.In;
 
 import java.util.List;
-
 /**
- * Created by zhangfeng on 2018/1/15.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 文书内容接口
+ **/
 public interface OfficialContentService {
     /**
      * 添加文书档案

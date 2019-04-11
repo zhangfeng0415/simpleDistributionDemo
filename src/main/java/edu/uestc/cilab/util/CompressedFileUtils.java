@@ -13,7 +13,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Created by zhangfeng on 2018/7/5.
+ * @author : zhangfeng
  * 转载至https://blog.csdn.net/qfashly/article/details/79499147
  */
 public class CompressedFileUtils {

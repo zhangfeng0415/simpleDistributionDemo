@@ -14,15 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Copyright ©2017 张书洲(https://github.com/shuzhou)@电子科技大学计算机科学与工程学院
- * <p/>
- * Create with education-demo in edu.uestc.cilab.filter
- * Class: TeacherFilter.java
- * User: joe-mac
- * Email: zhangshuzhou.hi@163.com
- * Time: 2017-05-10 10:10
- * Description:用户权限过滤器
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 用户权限过滤器
+ **/
 public class UserFilter implements Filter {
 
     Logger logger = LoggerFactory.getLogger(UserFilter.class);

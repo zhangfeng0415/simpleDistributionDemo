@@ -3,12 +3,11 @@ package edu.uestc.cilab.service;
 import edu.uestc.cilab.entity.Goods;
 import edu.uestc.cilab.exception.ExistException;
 import edu.uestc.cilab.util.PageUtil;
-
 /**
- * @author zhangfeng 2498711309@qq.com
- * @date 2019/3/22 17:44
- * @description：商品接口
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 商品接口
+ **/
 public interface GoodsService {
     /**
      * 添加商品

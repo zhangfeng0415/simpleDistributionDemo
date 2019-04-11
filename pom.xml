@@ -22,6 +22,8 @@
     <sl4j.version>1.7.21</sl4j.version>
     <!--swagger包(api生成工具)版本-->
     <swagger.version>1.0.2</swagger.version>
+    <!--lombok包版本-->
+    <lombok.version>1.16.20</lombok.version>
   </properties>
 
   <dependencies>
@@ -151,17 +153,12 @@
       <version>2.6.1</version>
     </dependency>
 
-    <!--&lt;!&ndash;Apache POI 操作excel表格的工具类库&ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>org.apache.poi</groupId>-->
-      <!--<artifactId>poi</artifactId>-->
-      <!--<version>3.8</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.apache.poi</groupId>-->
-      <!--<artifactId>poi-ooxml</artifactId>-->
-      <!--<version>3.8</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- 文件上传所依赖的jar包 -->
     <dependency>

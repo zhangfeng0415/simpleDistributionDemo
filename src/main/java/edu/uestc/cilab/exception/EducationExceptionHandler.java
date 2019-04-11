@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Copyright ©2017 章峰(https://github.com/zhangfeng)@电子科技大学计算机科学与工程学院
+ * Copyright ©2017 章峰(https://github.com/zhangfeng0415)@电子科技大学计算机科学与工程学院
  * <p>
  * Create with education in edu.uestc.cilab.exception
  * Class: EducationExceptionHandler.java
- * User: zhangfeng
+ * @author : zhangfeng
  * Email: 2498711309@qq.com
  * Time: 2017-11-21 16:43
  * Description:

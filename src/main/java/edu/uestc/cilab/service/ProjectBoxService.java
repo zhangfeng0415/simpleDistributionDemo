@@ -5,10 +5,11 @@ import edu.uestc.cilab.exception.ExistException;
 import edu.uestc.cilab.util.PageUtil;
 
 import java.util.List;
-
 /**
- * Created by zhangfeng on 2018/3/6.
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 工程盒子接口
+ **/
 public interface ProjectBoxService {
     /**
      * 添加工程档案盒子

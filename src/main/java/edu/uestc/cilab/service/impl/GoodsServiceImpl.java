@@ -14,10 +14,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author zhangfeng 2498711309@qq.com
- * @date 2019/3/22 17:49
- * @description：
- */
+ * @author: zhangfeng
+ * @date: 2019-04-11 13:48
+ * @description: 商品接口实现层
+ **/
 @Service
 public class GoodsServiceImpl implements GoodsService {
     @Autowired
